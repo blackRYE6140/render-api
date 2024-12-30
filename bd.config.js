@@ -1,17 +1,13 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-    host: 'bbk7ufx7dc5w3wtai7ms-mysql.services.clever-cloud.com',
-    user: 'ul0korm52weekxlv',
-    password: 'gDqmPonPeVSdwlfouC0V',
-    database: 'bbk7ufx7dc5w3wtai7ms'
-});
-
-connection.connect((err) => {
-    if (err) {
-        console.log('Erreur de connexion à la base de données clever cloud', err);
-    } else {
-        console.log('Connecté à la base de données');
+const connection = mysql.createPool({
+    connectionLimit: 10, // Nombre maximum de connexions
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    ssl: {
+        rejectUnauthorized: true
     }
 });
 
