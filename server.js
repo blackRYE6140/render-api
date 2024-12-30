@@ -1,3 +1,5 @@
+require('dotenv').config(); 
+
 const express = require('express');
 const cors = require("cors");
 const chambreRoutes = require('./requete/requeteChambre');
@@ -22,7 +24,7 @@ app.use('/api/reservation', reservationRoutes);
 app.use('/api/login', loginRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
