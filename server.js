@@ -22,7 +22,7 @@ app.use('/api/reservation', reservationRoutes);
 app.use('/api/login', loginRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
