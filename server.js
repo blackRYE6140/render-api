@@ -23,7 +23,6 @@ app.use('/api/client', clientRoutes);
 app.use('/api/reservation', reservationRoutes);
 app.use('/api/login', loginRoutes);
 app.use('/api/dashboard', dashboardRoutes);
-
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
