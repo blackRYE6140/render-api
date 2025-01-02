@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     // const sql = "SELECT * FROM reservation";
     db.query(sql, (error, result) => {
         if (error) {
-            console.log("Erreur lors de la connexion à la base de données");
+            console.log("Erreur lors de la connexion à la base de données de la table reservation");
             res.status(500).send({ status: false, message: "Erreur lors de la récupération des données de la table reservation" });
         } else {
             res.status(200).send({ status: true, data: result });
