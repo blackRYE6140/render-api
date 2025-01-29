@@ -11,7 +11,7 @@ const dashboardRoutes = require('./requete/requeteDashboard');
 const app = express();
 
 var corsOptions = {
-  origin: ['https://reservation-chambre.vercel.app', 'http://localhost:4200'] 
+  origin: ['https://reservation-chambre.vercel.app', 'http://localhost:4200', 'http://127.0.0.1:5500'] 
 };
 
 app.use(cors(corsOptions));
